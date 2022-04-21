@@ -343,7 +343,12 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(arr, name){
-  return arr.bio
+  for(let i = 0; i < arr.length; i++){
+  if (arr[i].name === name) {
+    return arr[i].bio;
+      }
+    }
+  
 }
 
 
@@ -357,8 +362,15 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(arr, nationality){
+  const artistsCountry = []
+  for(let i = 0; i < arr.length; i++){
+  if (arr[i].nationality === nationality) {
+    const name = arr[i].name;
+    artistsCountry.push(name)
+      }
+    }
+    return artistsCountry;
 }
 
 
